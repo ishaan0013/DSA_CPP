@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void Union(vector<int> arr, vector<int> brr)
+void Intersection(vector<int> arr, vector<int> brr)
 {
     vector<int> ans;
     for (int i = 0; i < arr.size(); i++)
@@ -41,5 +41,5 @@ int main()
     {
         cin >> brr[i];
     }
-    Union(arr, brr);
+    Intersection(arr, brr);
 }
