@@ -9,4 +9,35 @@
 #include <vector>
 #include <bits/stdc++.h>
 using namespace std;
-int main() {}
+
+void Factorial(int num)
+{
+    vector<int> ans;
+    ans.push_back(1);
+    int carry = 0;
+    for (int i = 2; i <= num; i++)
+    {
+        for (int j = 0; j < ans.size(); j++)
+        {
+            int sum = ans[j] * i + carry;
+            ans[j] = sum % 10;
+            carry = sum / 10;
+        }
+        while (carry)
+        {
+            ans.push_back(carry % 10);
+            carry /= 10;
+        }
+    }
+    reverse(ans.begin(), ans.end());
+    for (auto i : ans)
+    {
+        cout << i;
+    }
+}
+using namespace std;
+int main()
+{
+    int num = 10;
+    Factorial(num);
+}
