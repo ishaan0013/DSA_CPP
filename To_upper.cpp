@@ -5,7 +5,8 @@ void Upper(char ch[])
 {
     for (int i = 0; i < strlen(ch); i++)
     {
-        if (ch[i] == ((int)32))
+        if (ch[i] == ((char)32) || (ch[i] == ((char)9)))
+        // ASCII code for tab is "9" and space is "32"
         {
             continue;
         }
