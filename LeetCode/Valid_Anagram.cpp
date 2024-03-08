@@ -10,6 +10,7 @@
 // Example 2:
 // Input: s = "rat", t = "car"
 // Output: false
+
 #include <iostream>
 #include <string>
 using namespace std;
